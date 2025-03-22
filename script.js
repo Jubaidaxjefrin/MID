@@ -23,12 +23,12 @@ function updateCart() {
 
   let itemsHTML = "<ul>"
   cart.forEach((item) => {
-    itemsHTML += <li>${item.name} - $${item.price.toFixed(2)}</li>
+    itemsHTML += `<li>${item.name} - $${item.price.toFixed(2)}</li>`
   })
   itemsHTML += "</ul>"
 
   cartItems.innerHTML = itemsHTML
-  cartTotal.innerHTML = <p>Total: $${total.toFixed(2)}</p>
+  cartTotal.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`
 }
 
 function clearCart() {
@@ -64,27 +64,27 @@ function filterProducts(category) {
 
 // Contact form submission
 function submitForm() {
-    const name = document.getElementById("name").value
-    const email = document.getElementById("email").value
-    const subject = document.getElementById("subject").value
-    const message = document.getElementById("message").value
-  
-    if (!name || !email || !subject || !message) {
-      alert("Please fill in all fields")
-      return
-    }
-  
-  
-    document.getElementById("form-message").classList.remove("hidden")
-  
-    // Clear form
-    document.getElementById("contactForm").reset()
-  
-    // Hide message after 5 seconds
-    setTimeout(() => {
-      document.getElementById("form-message").classList.add("hidden")
-    }, 5000)
+  const name = document.getElementById("name").value
+  const email = document.getElementById("email").value
+  const subject = document.getElementById("subject").value
+  const message = document.getElementById("message").value
+
+  if (!name || !email || !subject || !message) {
+    alert("Please fill in all fields")
+    return
   }
+
+
+  document.getElementById("form-message").classList.remove("hidden")
+
+  // Clear form
+  document.getElementById("contactForm").reset()
+
+  // Hide message after 5 seconds
+  setTimeout(() => {
+    document.getElementById("form-message").classList.add("hidden")
+  }, 5000)
+}
 
 // Newsletter subscription
 function subscribeNewsletter() {
@@ -105,6 +105,11 @@ function subscribeNewsletter() {
 }
 
 // Home page button functions
+function showNewCollection() {
+  alert(
+    "Explore our latest collection of gothic treasures, featuring new jewelry pieces, makeup shades, and clothing designs.",
+  )
+}
 
 function showStory() {
   alert(
