@@ -22,5 +22,108 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section class="products-header">
+            <h2>Our Dark Collection</h2>
+            <p>Explore our carefully curated selection of gothic jewelry, makeup, and clothing designed to embrace your darker aesthetic.</p>
+        </section>
+
+        <section class="product-categories">
+            <button class="category-btn active" onclick="filterProducts('all')">All Products</button>
+            <button class="category-btn" onclick="filterProducts('jewelry')">Jewelry</button>
+            <button class="category-btn" onclick="filterProducts('makeup')">Makeup</button>
+            <button class="category-btn" onclick="filterProducts('clothing')">Clothing</button>
+        </section>
+
+        <section class="products-grid">
+            <div class="product-card" data-category="jewelry">
+                <img src="images/jewellery1.jpg" alt="Devil Ear Cuff">
+                <h3>Devil Ear Cuff</h3>
+                <p>Sterling silver pendant featuring an intricately detailed devil skull with black onyx eyes.</p>
+                <p class="price">$49.99</p>
+                <button class="btn primary" onclick="addToCart('Devil Ear Cuff', 49.99)">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="jewelry">
+                <img src="images/jewellery2.jpg" alt="Ring">
+                <h3>Lucky Charm Ring</h3>
+                <p>Inspired by 19th century mourning jewelry, featuring black enamel and intricate filigree work.</p>
+                <p class="price">$65.99</p>
+                <button class="btn primary" onclick="addToCart('Lucky Charm Ring', 65.99)">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="makeup">
+                <img src="images/makeup1.jpg" alt="Sailor Moon Lipstick">
+                <h3>Sailor Moon Lipstick</h3>
+                <p>Ultra-pigmented matte lipstick in deep burgundy with long-lasting, non-drying formula.</p>
+                <p class="price">$18.99</p>
+                <button class="btn primary" onclick="addToCart('Sailor Moon Lipstick', 18.99)">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="makeup">
+                <img src="images/makeup2.jpg" alt="Lip Glow Oil">
+                <h3>Lip Glow Oil</h3>
+                <p>12 highly pigmented shades ranging from matte blacks to shimmering purples and deep reds.</p>
+                <p class="price">$42.99</p>
+                <button class="btn primary" onclick="addToCart('Lip Glow Oil', 42.99)">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="clothing">
+                <img src="images/clothing1.jpg" alt="Lacey stockings">
+                <h3>Lacey stockings</h3>
+                <p>Elegant black dress with Victorian-inspired lace details and corset-style back lacing.</p>
+                <p class="price">$89.99</p>
+                <button class="btn primary" onclick="addToCart('Lacey stockings', 89.99)">Add to Cart</button>
+            </div>
+            
+            <div class="product-card" data-category="clothing">
+                <img src="images/clothing2.jpg" alt="Opaque Stockings">
+                <h3>Opaque Stockings</h3>
+                <p>Luxurious velvet jacket with intricate brocade pattern, perfect for creating a sophisticated gothic look.</p>
+                <p class="price">$124.99</p>
+                <button class="btn primary" onclick="addToCart('Opaque Stockings', 124.99)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="cart-summary">
+            <h3>Shopping Cart</h3>
+            <div id="cart-items">
+                <p>Your cart is empty</p>
+            </div>
+            <div id="cart-total">
+                <p>Total: $0.00</p>
+            </div>
+            <button class="btn secondary" onclick="clearCart()">Clear Cart</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ultraviolet</h3>
+                <p>Embracing darkness with elegance since 2015.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>13 Shadow Lane, Rampura, Dhaka</p>
+                <p>Phone: 01992707696</p>
+                <p>Email: ultraviolet.bd@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Ultraviolet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
