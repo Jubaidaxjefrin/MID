@@ -1,15 +1,251 @@
 /* Global Styles */
-{
+*{
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: "Raleway", sans-serif;
     line-height: 1.6;
     color: #e0e0e0;
     background-color: #121212;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23232323' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  a {
+    text-decoration: none;
+    color: #b8a4c9;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #d8b4e2;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  .primary {
+    background-color: #6e1946;
+    color: white;
+  }
+  
+  .primary:hover {
+    background-color: #8c2259;
+    box-shadow: 0 0 10px rgba(110, 25, 70, 0.5);
+  }
+  
+  .secondary {
+    background-color: transparent;
+    border: 1px solid #6e1946;
+    color: #6e1946;
+  }
+  
+  .secondary:hover {
+    background-color: #6e1946;
+    color: white;
+    box-shadow: 0 0 10px rgba(110, 25, 70, 0.5);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo h1 {
+    color: #d8b4e2;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 2rem;
+  }
+  
+  nav ul li a {
+    font-weight: bold;
+    padding: 0.5rem 0;
+    position: relative;
+    letter-spacing: 1px;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #6e1946;
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
+    width: 100%;
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 2rem 5%;
+  }
+  
+  /* Home Page Styles - Using Flexbox */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+    color: #d8b4e2;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-image {
+    flex: 1;
+  }
+  
+  .hero-image img {
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(110, 25, 70, 0.3);
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .feature-card {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .feature-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 1px solid #6e1946;
+  }
+  
+  .feature-card h3 {
+    color: #d8b4e2;
+    margin-bottom: 1rem;
+  }
+  
+  .about {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+  }
+  
+  .about h2 {
+    color: #d8b4e2;
+    margin-bottom: 1rem;
+  }
+  
+  .about p {
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter {
+    background-color: rgba(110, 25, 70, 0.2);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #6e1946;
+    margin-bottom: 3rem;
+  }
+  
+  .newsletter h3 {
+    color: #d8b4e2;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 1.5rem auto;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+  }
+  
+  .newsletter-form button {
+    border-radius: 0;
+  }
+  
+  #subscribe-message {
+    color: #d8b4e2;
+    margin-top: 1rem;
   }
